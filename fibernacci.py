@@ -8,8 +8,7 @@ Created on Mon Oct  1 12:31:59 2018
 https://stackoverflow.com/questions/494594/how-to-write-the-fibonacci-sequence
 Answer by Aaron Hall for function F(n, _cache{})
 
-Fibernacci numbers are commonly used. For example, SCRUM poker for ranking 
-task difficulty
+Fibernacci numbers are commonly used.
 
 Accepts command line arguments and prints a table of n and F(n). For example:
     
