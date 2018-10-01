@@ -11,7 +11,7 @@ Answer by Aaron Hall for function F(n, _cache{})
 Fibernacci numbers are commonly used. For example, SCRUM poker for ranking 
 task difficulty
 
-Accepts command line arguments and prints a table of n and F(n). For example:
+Accepts command line arguments and prints a table of n and F(n) up to the value provided. Value provided is a max value where the algorithm stops. For example:
     
     python3.5 fibernacci.py 9.2 10 2000 hello 15
     
