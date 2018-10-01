@@ -2,8 +2,7 @@
 
 Author: Ryan Schostag
 
-Fibernacci numbers are commonly used. For example, SCRUM poker for ranking 
-task difficulty. 
+Fibernacci numbers are commonly used.
 
 The maximum value for input is:
 
