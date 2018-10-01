@@ -11,8 +11,7 @@ Answer by Aaron Hall for function F(n, _cache{})
 Fibernacci numbers are commonly used. For example, SCRUM poker for ranking 
 task difficulty
 
-Accepts command line arguments and prints a table of n and F(n) up to the value provided. 
-Value provided is a max value where the algorithm stops. For example:
+Accepts command line arguments and prints a table of n and F(n). For example:
     
     python3.5 fibernacci.py 9.2 10 2000 hello 15
     
@@ -129,7 +128,13 @@ def main(*args):
     for arg_n, arg in enumerate(argv):
         
         statement = '#{}: F({})'.format(arg_n, arg)
-        sym_n = len(statement) if len(statement) > 15 else 15
+        sym_n = int
+        if len(statement) < 20:
+            sym_n = 20
+        elif len(statement) > 80:
+            sym_n = 80
+        else:
+            sym_n = len(statement)
         
         if arg_n == 0:
             continue
@@ -153,6 +158,9 @@ def main(*args):
         except ValueError as val_err:
             print('\n"{}" is not a numeric type\n'.format(arg))
             continue
+        except OverflowError as overflow_err:
+            print('\n"{}" is too large to convert to number\n'.format(arg))
+            continue
                 
         max_n = arg
             
@@ -168,7 +176,21 @@ def main(*args):
             print('{}\t{}'.format(n, F(n)))
         
         print('\n')
+        
+        
+def test_max(counter=1):
+    """ Test the largest input value that can be processed """
+    
+    try:
+        while counter:
+            print(counter, end=' ')
+            F(counter)
+            counter += 1
+    except OverflowError:
+        return counter
+        
     
 
 if __name__ == "__main__":
     main(argv)
+    # print(test_max(counter=999))
